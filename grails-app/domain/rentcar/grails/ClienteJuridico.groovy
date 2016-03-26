@@ -1,6 +1,6 @@
 package rentcar.grails
 
-class ClienteJuridico {
+class ClienteJuridico extends Cliente {
 
 	String cnpj
 

@@ -1,6 +1,6 @@
 package rentcar.grails
 
-class ClienteFisico {
+class ClienteFisico extends Cliente {
 
 	String cpf
 	int celular
