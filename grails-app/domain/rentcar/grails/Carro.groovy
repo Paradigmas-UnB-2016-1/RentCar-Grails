@@ -7,7 +7,7 @@ class Carro {
 	String marca
 	int capacidadeDePessoas
 	String corDoVeiculo
-	String numeroDoChaci
+	String numeroDoChassi
 	Double valorDoDia
 
     static constraints = {
