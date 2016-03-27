@@ -14,7 +14,7 @@ class Carro {
     	nome nullable:false
     	modelo nullable:false
     	capacidadeDePessoas nullable:false
-    	numeroDoChaci nullable:false, unique:true
+    	numeroDoChassi nullable:false, unique:true
     	valorDoDia nullable:false
     }
 }
