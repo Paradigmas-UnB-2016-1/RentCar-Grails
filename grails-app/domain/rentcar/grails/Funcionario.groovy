@@ -9,7 +9,7 @@ class Funcionario {
 	Integer idade
 	//String cargo
 
-	//static hasMany = [carro: Carro]
+	static hasMany = [carro: Carro]
 	
 	String toString(){
 	  return nome
