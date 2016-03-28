@@ -173,8 +173,12 @@ img {
     background-image: url(../images/skin/database_add.png);
 }
 
-.nav li.dropdown.open ul.dropdown-menu {
-    background-color: #22528b;
+.nav li ul.dropdown-menu {
+    background-color: #4099BB;
+}
+
+li.nav-item:focus, li.nav-item:hover {
+    color: #4099EE ;
 }
 
 /* CREATE/EDIT FORMS AND SHOW PAGES */
@@ -565,10 +569,16 @@ a.skip {
     margin-bottom: 20px;
     color: white;
     height:300px;
-    text-align:center;"
+    text-align:center;
 }
 
-img.grails-logo {
-    height:340px;
-    margin-top:-10px;
+img.rentcar-logo {
+    height:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav li link {
+    background-color: #209EAC
 }
