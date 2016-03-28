@@ -6,4 +6,8 @@ class ClienteJuridico extends Cliente {
 
     static constraints = {
     }
+
+    String toString(){
+	  return super.nome
+	}
 }

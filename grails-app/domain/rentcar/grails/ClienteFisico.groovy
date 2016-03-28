@@ -8,4 +8,8 @@ class ClienteFisico extends Cliente {
 
     static constraints = {
     }
+
+    String toString(){
+	  return super.nome
+	}
 }

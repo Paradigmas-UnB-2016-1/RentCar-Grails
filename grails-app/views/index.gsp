@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="layout" content="main"/>
-        <title>Alugue um carro</title>
+        <title>RentCar</title>
 
         <asset:link rel="icon" href="favicon.png" type="image" />
     </head>

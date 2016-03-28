@@ -9,6 +9,8 @@ class Cliente {
 
 	static embedded = ['endereco']
 
+	static hasMany = [reservas: Reserva]
+
     static constraints = {
     }
 }

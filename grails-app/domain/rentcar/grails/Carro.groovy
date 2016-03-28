@@ -8,9 +8,11 @@ class Carro {
 	int capacidadeDePessoas
 	String corDoVeiculo
 	String numeroDoChassi
-	Double valorDoDia
+	Double valorDiaria
 
 	static belongsTo = [funcionario: Funcionario]
+
+	static hasMany = [reservas: Reserva]
 
     static constraints = {
     	nome nullable:false, blank:false
@@ -19,7 +21,7 @@ class Carro {
     	corDoVeiculo nullable:false, blank:false, inList: ["Branco","Preto","Prata","Cinza","Azul","Vermelho",
     														"Amarelo","Laranja","Verde"]
     	numeroDoChassi nullable:false, unique:true
-    	valorDoDia nullable:false
+    	valorDiaria nullable:false
     }
 
     String toString(){
