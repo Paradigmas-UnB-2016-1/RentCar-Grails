@@ -5,21 +5,23 @@ class Funcionario {
 	String nome
 	String endereco
 	String email
-	//Date dataNascimento
+	String senha
+	Date dataNascimento
 	Integer idade
-	//String cargo
+	String celular
 
 	static hasMany = [carro: Carro]
-	
-	String toString(){
-	  return nome
-	} 
     
     static constraints = {
 		nome nullable:false, blank:false
     	endereco nullable:false, blank:false
     	email email:true, unique:true
 		idade size: 18..150	
+		senha password:true
+		celular (phoneNumber: [strict: true])
     }
 
+    String toString() {
+    	return nome
+    }
 }

@@ -25,6 +25,6 @@ class Carro {
     }
 
     String toString(){
-	  return nome
+	  return nome + " " + corDoVeiculo
 	} 
 }

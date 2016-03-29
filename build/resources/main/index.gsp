@@ -10,7 +10,7 @@
 
         <content tag="nav">   
             <li class="nav-item">
-                <g:link controller="carro">Carros Disponíveis</g:link> 
+                <g:link controller="reserva">Faça sua Reserva!</g:link> 
             </li>
             
             <li class="nav-item">       

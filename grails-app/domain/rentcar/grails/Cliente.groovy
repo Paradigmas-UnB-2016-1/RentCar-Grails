@@ -4,7 +4,7 @@ class Cliente {
 
 	String nome
 	String email
-	int telefone
+	String telefone
 	Endereco endereco 
 
 	static embedded = ['endereco']
@@ -12,6 +12,8 @@ class Cliente {
 	static hasMany = [reservas: Reserva]
 
     static constraints = {
+    	email email:true
+    	telefone(phoneNumber: [strict: true])
     }
 }
 
