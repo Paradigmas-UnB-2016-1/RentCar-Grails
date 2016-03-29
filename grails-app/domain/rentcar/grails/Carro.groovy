@@ -14,6 +14,8 @@ class Carro {
 
 	static hasMany = [reservas: Reserva]
 
+	static hasMany = [alugueis: Aluguel]
+
     static constraints = {
     	nome nullable:false, blank:false
     	categoria inList: ["Economico","Compacto","Esportivo","Luxo","Pick up","SUV","Grande","Medio"]

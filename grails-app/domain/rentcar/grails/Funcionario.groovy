@@ -10,7 +10,8 @@ class Funcionario {
 	Integer idade
 	String celular
 
-	static hasMany = [carro: Carro]
+	static hasMany = [carros: Carro,
+						alugueis: Aluguel]
     
     static constraints = {
 		nome nullable:false, blank:false

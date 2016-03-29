@@ -11,6 +11,8 @@ class Cliente {
 
 	static hasMany = [reservas: Reserva]
 
+	static hasMany = [alugueis: Aluguel]
+
     static constraints = {
     	email email:true
     	telefone(phoneNumber: [strict: true])
