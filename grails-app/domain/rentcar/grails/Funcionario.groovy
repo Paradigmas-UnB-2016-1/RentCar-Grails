@@ -3,15 +3,16 @@ package rentcar.grails
 class Funcionario {
 
 	String nome
-	String endereco
+	Endereco endereco
 	String email
 	String senha
 	Date dataNascimento
 	Integer idade
 	String celular
 
-	static hasMany = [carros: Carro,
-						alugueis: Aluguel]
+	static embedded = ['endereco']
+
+	static hasMany = [carros: Carro, alugueis: Aluguel]
     
     static constraints = {
 		nome nullable:false, blank:false
