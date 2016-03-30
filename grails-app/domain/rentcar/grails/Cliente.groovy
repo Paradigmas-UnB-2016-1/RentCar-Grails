@@ -9,11 +9,10 @@ class Cliente {
 
 	static embedded = ['endereco']
 
-	static hasMany = [reservas: Reserva]
-
-	static hasMany = [alugueis: Aluguel]
+	static hasMany = [reservas: Reserva, alugueis: Aluguel]
 
     static constraints = {
+    	nome nullable:false, blank:false
     	email email:true
     	telefone(phoneNumber: [strict: true])
     }
@@ -26,5 +25,9 @@ class Endereco {
 	String bairro
 	String logradouro
 	int numero
-
+	
+	static constraints = {
+    	uf nullable:false, blank:false
+    	cidade nullable:false, blank:false	
+    }
 }
