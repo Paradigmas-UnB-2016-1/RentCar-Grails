@@ -7,6 +7,8 @@ class ClienteFisico extends Cliente {
 	Date dataNascimento
 
     static constraints = {
+    	cpf nullable:false, blank: false, maxSize: 11
+    	dataNascimento nullable:false
     }
 
     String toString(){
