@@ -5,7 +5,7 @@ import grails.transaction.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 
 @Transactional(readOnly = true)
-@Secured("isAuthenticated()")
+@Secured("permitAll")
 
 class ReservaController {
 
@@ -15,7 +15,7 @@ class ReservaController {
         params.max = Math.min(max ?: 10, 100)
         respond Reserva.list(params), model:[reservaCount: Reserva.count()]
     }
-
+    @Secured("isAuthenticated()")
     def show(Reserva reserva) {
         respond reserva
     }
