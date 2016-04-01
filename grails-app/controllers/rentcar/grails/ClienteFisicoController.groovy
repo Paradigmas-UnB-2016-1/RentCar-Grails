@@ -4,13 +4,14 @@ import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 
-@Secured("isAuthenticated()")
-
+@Secured("permitAll")
 @Transactional(readOnly = true)
+
 class ClienteFisicoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    @Secured("isAuthenticated()")
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond ClienteFisico.list(params), model:[clienteFisicoCount: ClienteFisico.count()]

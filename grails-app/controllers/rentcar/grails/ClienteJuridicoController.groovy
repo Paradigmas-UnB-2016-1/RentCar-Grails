@@ -5,13 +5,13 @@ import grails.transaction.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 
 @Transactional(readOnly = true)
-
-@Secured("isAuthenticated()")
+@Secured("permitAll")
 
 class ClienteJuridicoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    @Secured("isAuthenticated()")
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond ClienteJuridico.list(params), model:[clienteJuridicoCount: ClienteJuridico.count()]
