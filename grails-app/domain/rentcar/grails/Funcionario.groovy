@@ -1,7 +1,7 @@
 package rentcar.grails
 
 class Funcionario {
-
+	
 	String nome
 	Endereco endereco
 	String email
