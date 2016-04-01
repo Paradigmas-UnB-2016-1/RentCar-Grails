@@ -2,8 +2,11 @@ package rentcar.grails
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import grails.plugin.springsecurity.annotation.Secured
 
 @Transactional(readOnly = true)
+@Secured("isAuthenticated()")
+
 class ReservaController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
