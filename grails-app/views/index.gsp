@@ -10,14 +10,16 @@
 
         <content tag="nav">   
             <li class="nav-item">
-                <g:link controller="reserva">Faça sua Reserva!</g:link> 
+                <g:link controller="reserva" action="create">Faça sua Reserva!</g:link> 
             </li>
             
             <li class="nav-item">       
                  <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastre-se<span class="caret"></span></a>     
                  <ul class="dropdown-menu">        
-                     <g:link controller="clienteFisico">Pessoa Física</g:link> 
-                     <g:link controller="clienteJuridico">Pessoa Jurídica</g:link>    
+                     <g:link controller="clienteFisico" action="create">Pessoa Física</g:link> 
+                     <g:link controller="clienteJuridico" action="create">Pessoa Jurídica</g:link>
+                     <g:link controller="carro" action="create">Carro</g:link>
+                     <g:link controller="funcionario" action="create">Funcionário</g:link>    
                  </ul>     
              </li>
         </content>
